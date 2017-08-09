@@ -8,6 +8,7 @@ $(function () {
         if ($('#name').val() != '' && $('#email') != '') {
             $('.pac-man').hide();
             $('.alert').removeClass('alert-info').addClass('alert-success').text('Success');
+            $('button').removeClass('submit-anim');
             clearTimeout(timer);
         }
     });

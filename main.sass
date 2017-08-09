@@ -12,10 +12,13 @@ button
 /* PULSE */
 .submit-anim
   position: relative
+  transition: all 1s
 
   &:hover
+    transform: translateX(-200px)
 
   &:before, &:after
+    outline: none
     content: ''
     display: block
     width: 100%
@@ -26,8 +29,12 @@ button
     position: absolute
     top: 0
     left: 0
-    animation: pulse 3s linear infinite
     opacity: 0
+
+
+.submit-anim
+  &:before
+    animation: pulse 3s linear infinite
   &:after
     animation: pulse 2s linear 3s infinite
 

@@ -10,8 +10,12 @@ button {
 
 /* PULSE */
 .submit-anim {
-  position: relative; }
+  position: relative;
+  transition: all 1s; }
+  .submit-anim:hover {
+    transform: translateX(-200px); }
   .submit-anim:before, .submit-anim:after {
+    outline: none;
     content: "";
     display: block;
     width: 100%;
@@ -22,10 +26,12 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    animation: pulse 3s linear infinite;
     opacity: 0; }
-  .submit-anim:after {
-    animation: pulse 2s linear 3s infinite; }
+
+.submit-anim:before {
+  animation: pulse 3s linear infinite; }
+.submit-anim:after {
+  animation: pulse 2s linear 3s infinite; }
 
 @keyframes pulse {
   0% {
